@@ -59,7 +59,7 @@ export const projects: Project[] = [
     status: "live",
     featured: true,
     problem:
-      "Dog-friendly event info in Tampa Bay is scattered across 13+ venue websites, each with a completely different calendar system: Squarespace, WordPress plugins, GoDaddy sites with events buried in inline JavaScript, Eventbrite embeds, static HTML pages. My fiancée publishes a newsletter curating these events, and the manual process of visiting every site, deduplicating, and rewriting descriptions was taking hours every week.",
+      "Dog-friendly event info in Tampa Bay is scattered across 13+ venue websites, none of which talk to each other and all of which render event data differently. My fiancée publishes a newsletter curating these events, and the manual process of visiting every site, deduplicating, and rewriting descriptions was taking hours every week.",
     approach:
       "I built a CLI pipeline that does the whole job end to end. Playwright visits 13 configured sources, each with its own adapter for selectors and date formats. Luxon normalizes dates, a hashing function deduplicates across sources, and history tracking tags events as new, recurring, or returning. OpenAI enriches each event with a one-to-two sentence description, then the pipeline renders HTML and pushes a draft to Beehiiv via their API. Two minutes, scrape to draft.",
     insight:
