@@ -70,14 +70,25 @@ export const projects: Project[] = [
       { name: "poll-sports-ios", description: "Native iOS app with credibility badges and poll voting", techStack: ["Swift", "SwiftUI", "Firebase", "SPM"] },
     ],
   },
-];
-
-export const secondaryProjects = [
   {
+    slug: "walks-by-virginia",
     title: "Walks by Virginia",
-    description: "Next.js web app (in progress)",
+    tagline: "Booking platform for a solo dog boarding business",
+    featured: true,
+    problem:
+      "My friend Virginia runs a dog boarding business out of her home, two dogs max. Her booking process was texts and a paper calendar. She'd double-book, lose track of allergies and med schedules, and forget which owners authorized emergency vet visits. For someone whose pitch is personal attention, the operations were held together with sticky notes.",
+    approach:
+      "I built her a full booking platform in five days. Next.js, Supabase, Tailwind. A multi-step booking form handles service selection, date picking, dog profiles, and vet authorization. A Supabase stored procedure checks real-time capacity against her two-dog limit. Confirmed bookings sync to Google Calendar. The admin dashboard handles date blocking, capacity overrides, and per-dog care plans. Row-level security on every table, immutable vet authorization records, and 149 tests across 21 files.",
+    insight:
+      "Start with the constraints, not the features. Virginia's two-dog limit is the single most important thing about her business. Every technical decision flows from that. If I'd started with a feature list instead of understanding the constraint, I would have over-engineered some parts and under-engineered the one that matters.",
+    techStack: ["Next.js", "Supabase", "Tailwind", "Google Calendar API"],
+    repos: [
+      { name: "walks-by-virginia-web", description: "Booking platform, admin dashboard, and marketing site", techStack: ["Next.js", "Supabase", "Tailwind", "RLS", "ISR"] },
+    ],
   },
 ];
+
+export const secondaryProjects: { title: string; description: string }[] = [];
 
 export function getFeaturedProjects(): Project[] {
   return projects.filter((p) => p.featured);

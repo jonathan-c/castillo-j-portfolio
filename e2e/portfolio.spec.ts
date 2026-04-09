@@ -11,7 +11,7 @@ test("homepage renders hero and all featured projects", async ({ page }) => {
 });
 
 test("case study pages load with correct content", async ({ page }) => {
-  const slugs = ["hostalytics", "good-boy-guide", "poll-sports"];
+  const slugs = ["hostalytics", "good-boy-guide", "poll-sports", "walks-by-virginia"];
   for (const slug of slugs) {
     await page.goto(`/projects/${slug}`);
     await expect(page.locator("h1")).toBeVisible();

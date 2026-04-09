@@ -1,6 +1,5 @@
-import { getFeaturedProjects, secondaryProjects } from "@/lib/projects";
+import { getFeaturedProjects } from "@/lib/projects";
 import { ProjectCard } from "@/components/ProjectCard";
-import { SecondaryCard } from "@/components/SecondaryCard";
 import { OutboundLink } from "@/components/OutboundLink";
 
 export default function Home() {
@@ -32,32 +31,6 @@ export default function Home() {
       {featured.map((project) => (
         <ProjectCard key={project.slug} project={project} />
       ))}
-
-      {/* Secondary Projects */}
-      <p className="font-mono text-[11px] text-accent uppercase tracking-[2.5px] font-semibold mb-7 mt-16 pb-3 border-b-2 border-border">
-        More Projects
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16">
-        {secondaryProjects.map((p) => (
-          <SecondaryCard
-            key={p.title}
-            title={p.title}
-            description={p.description}
-          />
-        ))}
-        <OutboundLink
-          href="https://github.com/jonathan-c/"
-          label="GitHub Profile"
-          className="bg-surface border border-border rounded-[10px] p-5 shadow-[0_1px_3px_rgba(0,0,0,0.03)] hover:border-accent/40 transition-colors"
-        >
-          <span className="font-display text-[17px] font-extrabold mb-1 block">
-            GitHub →
-          </span>
-          <span className="text-[13px] text-muted leading-snug block">
-            See all projects
-          </span>
-        </OutboundLink>
-      </div>
 
       {/* About */}
       <section className="pt-12 pb-8 border-t-2 border-border mt-4">
