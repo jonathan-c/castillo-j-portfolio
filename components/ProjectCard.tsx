@@ -14,7 +14,7 @@ export function ProjectCard({ project }: { project: Project }) {
           fill
           className="object-cover object-top"
           sizes="(max-width: 740px) 100vw, 740px"
-          priority={project.slug === "hostalytics"}
+          priority={project.slug === "hostalytics" || project.slug === "good-boy-guide"}
         />
       </div>
       <div className="p-7">
