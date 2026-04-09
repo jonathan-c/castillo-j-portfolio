@@ -19,8 +19,8 @@ export default function Home() {
         </p>
         <p className="text-[17px] text-muted leading-relaxed max-w-[540px]">
           I like building products end to end. Outside of work, I&apos;ve shipped
-          a product suite for Airbnb hosts, a cross-platform sports app, and an
-          AI agent that writes newsletters.
+          a product suite for Airbnb hosts, a fantasy football advice platform,
+          and an AI agent that writes newsletters.
         </p>
       </section>
 
