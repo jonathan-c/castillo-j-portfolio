@@ -1,0 +1,72 @@
+import type { Metadata } from "next";
+import { Instrument_Sans, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
+import { OutboundLink } from "@/components/OutboundLink";
+import "./globals.css";
+
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const cabinetGrotesk = localFont({
+  src: [
+    {
+      path: "../public/fonts/CabinetGrotesk-Extrabold.woff2",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-cabinet-grotesk",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: "Jonathan Castillo — Full-Stack Engineer",
+    template: "%s — Jonathan Castillo",
+  },
+  description:
+    "I build things people actually use. Portfolio featuring Hostalytics, Good Boy Guide, Poll Sports, and more.",
+  openGraph: {
+    title: "Jonathan Castillo — Full-Stack Engineer",
+    description:
+      "I build things people actually use. Portfolio featuring Hostalytics, Good Boy Guide, Poll Sports, and more.",
+    type: "website",
+    images: ["/og/home.png"],
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${instrumentSans.variable} ${geistMono.variable} ${cabinetGrotesk.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col font-sans">
+        <main className="flex-1">{children}</main>
+        <footer className="max-w-[740px] mx-auto px-6 py-12 border-t border-border text-sm text-muted">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <p>Jonathan Castillo</p>
+            <div className="flex gap-5">
+              <OutboundLink href="https://github.com/jonathan-c/" label="GitHub (footer)" className="hover:text-accent transition-colors">GitHub</OutboundLink>
+              <OutboundLink href="https://www.linkedin.com/in/castillojonathan/" label="LinkedIn (footer)" className="hover:text-accent transition-colors">LinkedIn</OutboundLink>
+            </div>
+          </div>
+        </footer>
+        <Analytics />
+      </body>
+    </html>
+  );
+}

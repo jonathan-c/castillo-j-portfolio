@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #FAF8F5;
+  --surface: #FFFFFF;
+  --text: #1A1A1A;
+  --muted: #6B6B6B;
+  --accent: #E85D26;
+  --accent-hover: #D14E1A;
+  --border: #E8E5E1;
+  --tag-bg: #F0EDE9;
+  --tag-text: #5C5C5C;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-border: var(--border);
+  --color-tag-bg: var(--tag-bg);
+  --color-tag-text: var(--tag-text);
+  --font-sans: var(--font-instrument-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-cabinet-grotesk);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans, 'Instrument Sans', -apple-system, sans-serif);
+}
