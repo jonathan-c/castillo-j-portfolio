@@ -46,9 +46,9 @@ export default function Home() {
           />
         ))}
         <OutboundLink
-          href="https://github.com/castillo-j"
+          href="https://github.com/jonathan-c/"
           label="GitHub Profile"
-          className="bg-surface border border-border rounded-[10px] p-5 shadow-[0_1px_3px_rgba(0,0,0,0.03)] hover:border-accent transition-colors"
+          className="bg-surface border border-border rounded-[10px] p-5 shadow-[0_1px_3px_rgba(0,0,0,0.03)] hover:border-accent/40 transition-colors"
         >
           <span className="font-display text-[17px] font-extrabold mb-1 block">
             GitHub →
@@ -71,25 +71,18 @@ export default function Home() {
         </p>
         <div className="flex flex-wrap gap-5">
           <OutboundLink
-            href="https://github.com/castillo-j"
+            href="https://github.com/jonathan-c/"
             label="GitHub"
             className="text-sm text-accent font-semibold hover:text-accent-hover"
           >
             GitHub
           </OutboundLink>
           <OutboundLink
-            href="https://linkedin.com/in/jonathancastillo"
+            href="https://www.linkedin.com/in/castillojonathan/"
             label="LinkedIn"
             className="text-sm text-accent font-semibold hover:text-accent-hover"
           >
             LinkedIn
-          </OutboundLink>
-          <OutboundLink
-            href="mailto:jonathan@example.com"
-            label="Email"
-            className="text-sm text-accent font-semibold hover:text-accent-hover"
-          >
-            Email
           </OutboundLink>
           <OutboundLink
             href="/resume.pdf"

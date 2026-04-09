@@ -89,6 +89,38 @@ export default async function CaseStudyPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Repos */}
+      {project.repos.length > 0 && (
+        <section className="pb-12">
+          <p className="font-mono text-[11px] text-accent uppercase tracking-[2.5px] font-semibold mb-4">
+            {project.repos.length === 1 ? "Repository" : `${project.repos.length} Repositories`}
+          </p>
+          <div className="space-y-3">
+            {project.repos.map((repo) => (
+              <div
+                key={repo.name}
+                className="bg-surface border border-border rounded-[10px] p-4"
+              >
+                <p className="font-mono text-[13px] font-medium mb-1">
+                  {repo.name}
+                </p>
+                <p className="text-[13px] text-muted mb-2">{repo.description}</p>
+                <div className="flex flex-wrap gap-1">
+                  {repo.techStack.map((t) => (
+                    <span
+                      key={t}
+                      className="font-mono text-[10px] text-tag-text bg-tag-bg px-2 py-0.5 rounded"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Links */}
       {(project.githubUrl || project.liveUrl) && (
         <section className="pb-16 flex gap-4">

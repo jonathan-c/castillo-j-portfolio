@@ -59,9 +59,8 @@ export default function RootLayout({
           <div className="flex flex-wrap items-center justify-between gap-4">
             <p>Jonathan Castillo</p>
             <div className="flex gap-5">
-              <a href="https://github.com/castillo-j" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">GitHub</a>
-              <a href="https://linkedin.com/in/jonathancastillo" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a>
-              <a href="mailto:jonathan@example.com" className="hover:text-accent transition-colors">Email</a>
+              <a href="https://github.com/jonathan-c/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">GitHub</a>
+              <a href="https://www.linkedin.com/in/castillojonathan/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a>
             </div>
           </div>
         </footer>

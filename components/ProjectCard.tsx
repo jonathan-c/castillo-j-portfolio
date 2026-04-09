@@ -22,6 +22,23 @@ export function ProjectCard({ project }: { project: Project }) {
             <TechTag key={tech} label={tech} />
           ))}
         </div>
+        {project.repos.length > 1 && (
+          <div className="mb-4 pt-3 border-t border-border">
+            <p className="font-mono text-[10px] text-muted uppercase tracking-[2px] mb-2">
+              {project.repos.length} repos
+            </p>
+            <div className="space-y-1.5">
+              {project.repos.map((repo) => (
+                <div key={repo.name} className="flex items-baseline gap-2">
+                  <span className="font-mono text-[12px] text-text font-medium">
+                    {repo.name}
+                  </span>
+                  <span className="text-[12px] text-muted">{repo.description}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
         <Link
           href={`/projects/${project.slug}`}
           className="inline-block text-sm text-accent font-semibold hover:text-accent-hover py-2"
