@@ -78,7 +78,7 @@ export const projects: Project[] = [
     status: "live",
     featured: true,
     problem:
-      "Fantasy football players constantly need quick feedback on lineup decisions, but the places they get it are messy. Reddit threads, Discord, group chats. The feedback is buried in opinions with no structure, no way to compare responses, and no accountability for bad advice.",
+      "Every week, millions of fantasy football players make lineup decisions based on unstructured advice scattered across Reddit threads, Discord servers, and group chats. There's no way to compare opinions, no accountability for bad advice, and no signal for whose take is actually worth listening to.",
     approach:
       "I turned fantasy questions into lightweight polls. Instead of writing a long post and hoping for responses, a user asks a specific question and the community votes. I built an Angular web app with accuracy-based leaderboards and a native SwiftUI iOS app, both hitting the same Firebase backend with Cloud Functions handling poll scoring, NFL data sync, and weekly accuracy percentiles. I layered in AI to complement community votes with context-aware analysis, and added Stripe for payments.",
     insight:
