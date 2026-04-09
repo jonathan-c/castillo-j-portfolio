@@ -126,7 +126,7 @@ export const projects: Project[] = [
     techStack: ["Next.js", "Supabase", "Tailwind", "Google Calendar API"],
     liveUrl: "https://www.walksbyvirginia.com/",
     repos: [
-      { name: "walks-by-virginia-web", description: "Booking platform, admin dashboard, and marketing site", techStack: ["Next.js", "Supabase", "Tailwind", "RLS", "ISR"] },
+      { name: "walks-by-virginia-web", description: "Booking platform, admin dashboard, and marketing site", techStack: ["Next.js", "Supabase", "Tailwind", "Row-Level Security"] },
     ],
   },
 ];
