@@ -74,6 +74,16 @@ export function ProjectCard({ project }: { project: Project }) {
               Chrome Web Store →
             </a>
           )}
+          {project.appStoreUrl && (
+            <a
+              href={project.appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-sm text-accent font-semibold hover:text-accent-hover py-2"
+            >
+              App Store →
+            </a>
+          )}
           <Link
             href={`/projects/${project.slug}`}
             className="inline-block text-sm text-muted hover:text-text py-2"

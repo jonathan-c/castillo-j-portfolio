@@ -19,6 +19,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   chromeWebStoreUrl?: string;
+  appStoreUrl?: string;
 }
 
 export const statusLabels: Record<Project["status"], string> = {
@@ -85,6 +86,7 @@ export const projects: Project[] = [
       "Sometimes the biggest improvement isn't more intelligence. It's better format. Polling sounds simple, but the format changes behavior: faster participation, easier-to-read results, and discussions that are decision-oriented instead of open-ended.",
     techStack: ["Angular", "Swift/SwiftUI", "Rails", "Firebase", "Cloud Functions", "Stripe"],
     liveUrl: "https://pollsports.com/",
+    appStoreUrl: "https://apps.apple.com/us/app/poll-sports/id1602304212",
     repos: [
       { name: "poll-sports-angular", description: "Web app with accuracy leaderboards and NFL data sync", techStack: ["Angular", "Firebase", "RxJS", "PrimeNG", "Stripe"] },
       { name: "poll-sports-ios", description: "Native iOS app with credibility badges and poll voting", techStack: ["Swift", "SwiftUI", "Firebase", "SPM"] },

@@ -130,7 +130,7 @@ export default async function CaseStudyPage({ params }: Props) {
       )}
 
       {/* Links */}
-      {(project.githubUrl || project.liveUrl || project.chromeWebStoreUrl) && (
+      {(project.githubUrl || project.liveUrl || project.chromeWebStoreUrl || project.appStoreUrl) && (
         <section className="pb-16 flex flex-wrap gap-4">
           {project.liveUrl && (
             <a
@@ -150,6 +150,16 @@ export default async function CaseStudyPage({ params }: Props) {
               className="text-sm text-accent font-semibold hover:text-accent-hover"
             >
               Chrome Web Store →
+            </a>
+          )}
+          {project.appStoreUrl && (
+            <a
+              href={project.appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-accent font-semibold hover:text-accent-hover"
+            >
+              App Store →
             </a>
           )}
           {project.githubUrl && (
