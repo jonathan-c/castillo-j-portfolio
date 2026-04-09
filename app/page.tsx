@@ -26,7 +26,7 @@ export default function Home() {
 
       {/* Featured Projects */}
       <p className="font-mono text-[11px] text-accent uppercase tracking-[2.5px] font-semibold mb-7 mt-8 pb-3 border-b-2 border-border">
-        Featured Projects
+        Products I've Shipped
       </p>
       {featured.map((project) => (
         <ProjectCard key={project.slug} project={project} />

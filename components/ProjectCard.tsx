@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { TechTag } from "./TechTag";
 import type { Project } from "@/lib/projects";
+import { statusLabels } from "@/lib/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -9,9 +10,14 @@ export function ProjectCard({ project }: { project: Project }) {
         [ Screenshot: {project.title} ]
       </div>
       <div className="p-7">
-        <h2 className="font-display text-[30px] font-extrabold leading-tight tracking-tight mb-1.5">
-          {project.title}
-        </h2>
+        <div className="flex items-center gap-3 mb-1.5">
+          <h2 className="font-display text-[30px] font-extrabold leading-tight tracking-tight">
+            {project.title}
+          </h2>
+          <span className="shrink-0 font-mono text-[10px] font-semibold uppercase tracking-wider bg-accent/10 text-accent px-2 py-0.5 rounded">
+            {statusLabels[project.status]}
+          </span>
+        </div>
         <p className="text-[15px] text-muted mb-4">{project.tagline}</p>
         <p className="text-[15px] leading-relaxed mb-4">
           <strong className="font-semibold">The problem:</strong>{" "}
@@ -39,12 +45,34 @@ export function ProjectCard({ project }: { project: Project }) {
             </div>
           </div>
         )}
-        <Link
-          href={`/projects/${project.slug}`}
-          className="inline-block text-sm text-accent font-semibold hover:text-accent-hover py-2"
-        >
-          Read case study →
-        </Link>
+        <div className="flex flex-wrap items-center gap-4">
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-sm text-accent font-semibold hover:text-accent-hover py-2"
+            >
+              Visit Site →
+            </a>
+          )}
+          {project.chromeWebStoreUrl && (
+            <a
+              href={project.chromeWebStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-sm text-accent font-semibold hover:text-accent-hover py-2"
+            >
+              Chrome Web Store →
+            </a>
+          )}
+          <Link
+            href={`/projects/${project.slug}`}
+            className="inline-block text-sm text-muted hover:text-text py-2"
+          >
+            How I built it →
+          </Link>
+        </div>
       </div>
     </div>
   );

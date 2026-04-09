@@ -29,7 +29,7 @@ test("invalid project slug returns 404", async ({ page }) => {
 
 test("homepage navigation to case study and back", async ({ page }) => {
   await page.goto("/");
-  await page.locator("a", { hasText: "Read case study" }).first().click();
+  await page.locator("a", { hasText: "How I built it" }).first().click();
   await expect(page.getByText("The Problem", { exact: true })).toBeVisible();
   await page.locator("a", { hasText: "Back" }).click();
   await expect(page.locator("h1")).toContainText("Jonathan");

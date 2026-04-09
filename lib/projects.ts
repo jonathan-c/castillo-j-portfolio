@@ -8,6 +8,7 @@ export interface Project {
   slug: string;
   title: string;
   tagline: string;
+  status: "live" | "chrome-web-store" | "testflight" | "in-development";
   featured: boolean;
   problem: string;
   approach: string;
@@ -19,11 +20,19 @@ export interface Project {
   chromeWebStoreUrl?: string;
 }
 
+export const statusLabels: Record<Project["status"], string> = {
+  live: "Live",
+  "chrome-web-store": "In Chrome Web Store",
+  testflight: "TestFlight",
+  "in-development": "In Development",
+};
+
 export const projects: Project[] = [
   {
     slug: "hostalytics",
     title: "Hostalytics",
-    tagline: "A/B testing toolkit for Airbnb hosts",
+    tagline: "Helps Airbnb hosts track listing changes and see what actually worked",
+    status: "live",
     featured: true,
     problem:
       "Airbnb hosts constantly tweak their listings but have no way to know if changes actually helped. They update a title, swap photos, rewrite descriptions, then hope for the best. The metrics Airbnb provides don't connect specific changes to outcomes.",
@@ -43,10 +52,11 @@ export const projects: Project[] = [
   {
     slug: "good-boy-guide",
     title: "Good Boy Guide",
-    tagline: "AI-powered event scraper for Tampa Bay dog owners",
+    tagline: "Scrapes 13+ venues, writes a weekly dog-friendly events newsletter for Tampa Bay",
+    status: "live",
     featured: true,
     problem:
-      "My girlfriend runs a dog newsletter for Tampa Bay. Every week she spent hours visiting a dozen websites, copying event details, rewriting descriptions, and formatting everything into a Beehiiv draft. The sources were the real headache: Squarespace calendars, WordPress plugins, GoDaddy sites with events buried in inline JavaScript, Eventbrite embeds, and static HTML pages.",
+      "My fiancée runs a dog newsletter for Tampa Bay. Every week she spent hours visiting a dozen websites, copying event details, rewriting descriptions, and formatting everything into a Beehiiv draft. The sources were the real headache: Squarespace calendars, WordPress plugins, GoDaddy sites with events buried in inline JavaScript, Eventbrite embeds, and static HTML pages.",
     approach:
       "I built a CLI pipeline that does the whole job end to end. Playwright visits 13 configured sources, each with its own adapter for selectors and date formats. Luxon normalizes dates, a hashing function deduplicates across sources, and history tracking tags events as new, recurring, or returning. OpenAI enriches each event with a one-to-two sentence description, then the pipeline renders HTML and pushes a draft to Beehiiv via their API. Two minutes, scrape to draft.",
     insight:
@@ -59,7 +69,8 @@ export const projects: Project[] = [
   {
     slug: "poll-sports",
     title: "Poll Sports",
-    tagline: "Fantasy football polling, cross-platform",
+    tagline: "Community-driven fantasy football polls with accuracy leaderboards, web + iOS",
+    status: "live",
     featured: true,
     problem:
       "Fantasy football players constantly need quick feedback on lineup decisions, but the places they get it are messy. Reddit threads, Discord, group chats. The feedback is buried in opinions with no structure, no way to compare responses, and no accountability for bad advice.",
@@ -77,7 +88,8 @@ export const projects: Project[] = [
   {
     slug: "walks-by-virginia",
     title: "Walks by Virginia",
-    tagline: "Booking platform for a solo dog boarding business",
+    tagline: "Full booking platform for a boutique dog boarding business, built in 5 days",
+    status: "live",
     featured: true,
     problem:
       "My fiancée Virginia runs a boutique dog boarding business out of our home, two dogs at a time. That intentional limit is the whole value proposition. But the tools available to solo pet-care operators are either giant marketplaces like Rover or nothing at all. There was no simple way to handle bookings, track each dog's care needs, manage capacity, or present a professional brand that matched the quality of her service.",
