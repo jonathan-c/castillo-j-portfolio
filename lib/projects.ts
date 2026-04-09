@@ -37,7 +37,7 @@ export const projects: Project[] = [
     status: "live",
     featured: true,
     problem:
-      "Airbnb hosts constantly tweak their listings but have no way to know if changes actually helped. They update a title, swap photos, rewrite descriptions, then hope for the best. The metrics Airbnb provides don't connect specific changes to outcomes.",
+      "Airbnb gives hosts performance metrics but never connects them to specific listing changes. A host updates their title, sees bookings go up a week later, and has no idea if it was the title, a demand spike, or a pricing change. Every optimization is a guess.",
     approach:
       "I built a product suite: a Next.js dashboard for tracking experiments, a Chrome extension that auto-syncs listing data every 6 hours, and a growth tool that finds relevant host conversations on Reddit and BiggerPockets. The extension captures listing changes automatically, and the dashboard frames them as before-and-after experiments tied to real performance data.",
     insight:
