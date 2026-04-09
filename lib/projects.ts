@@ -80,14 +80,15 @@ export const projects: Project[] = [
     problem:
       "Every week, millions of fantasy football players make lineup decisions based on unstructured advice scattered across Reddit threads, Discord servers, and group chats. There's no way to compare opinions, no accountability for bad advice, and no signal for whose take is actually worth listening to.",
     approach:
-      "I turned fantasy questions into lightweight polls. Instead of writing a long post and hoping for responses, a user asks a specific question and the community votes. I built an Angular web app with accuracy-based leaderboards and a native SwiftUI iOS app, both hitting the same Firebase backend with Cloud Functions handling poll scoring, NFL data sync, and weekly accuracy percentiles. I layered in AI to complement community votes with context-aware analysis, and added Stripe for payments.",
+      "I turned fantasy questions into lightweight polls. Instead of writing a long post and hoping for responses, a user asks a specific question and the community votes. I built an Angular web app with accuracy-based leaderboards, a native SwiftUI iOS app, and a Rails API that scrapes expert projections from fantasy sources using Selenium and processes them asynchronously with Sidekiq. The Angular app and iOS app both hit the same Firebase backend with Cloud Functions handling poll scoring, NFL data sync, and weekly accuracy percentiles.",
     insight:
       "Sometimes the biggest improvement isn't more intelligence. It's better format. Polling sounds simple, but the format changes behavior: faster participation, easier-to-read results, and discussions that are decision-oriented instead of open-ended.",
-    techStack: ["Angular", "Swift/SwiftUI", "Firebase", "Cloud Functions", "Stripe"],
+    techStack: ["Angular", "Swift/SwiftUI", "Rails", "Firebase", "Cloud Functions", "Stripe"],
     liveUrl: "https://pollsports.com/",
     repos: [
       { name: "poll-sports-angular", description: "Web app with accuracy leaderboards and NFL data sync", techStack: ["Angular", "Firebase", "RxJS", "PrimeNG", "Stripe"] },
       { name: "poll-sports-ios", description: "Native iOS app with credibility badges and poll voting", techStack: ["Swift", "SwiftUI", "Firebase", "SPM"] },
+      { name: "poll_sports_rails_api", description: "Projections scraper and analyst data pipeline", techStack: ["Rails 7", "PostgreSQL", "Sidekiq", "Selenium"] },
     ],
   },
   {
