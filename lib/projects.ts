@@ -65,6 +65,7 @@ export const projects: Project[] = [
     insight:
       "The tool creates a draft, not a published newsletter. That boundary is what makes it useful. She handles editorial judgment, the automation handles drudgery. If I'd automated everything end to end, the output would be generic and she'd stop using it.",
     techStack: ["Node.js", "Playwright", "OpenAI", "Beehiiv", "Luxon"],
+    liveUrl: "https://goodboyguide.com/",
     repos: [
       { name: "good-boy-guide-agent", description: "Scraper, enrichment, and newsletter pipeline", techStack: ["Node.js", "Playwright", "OpenAI", "Luxon"] },
     ],
