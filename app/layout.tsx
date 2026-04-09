@@ -56,7 +56,14 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans">
         <main className="flex-1">{children}</main>
         <footer className="max-w-[740px] mx-auto px-6 py-12 border-t border-border text-sm text-muted">
-          <p>Jonathan Castillo</p>
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <p>Jonathan Castillo</p>
+            <div className="flex gap-5">
+              <a href="https://github.com/castillo-j" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">GitHub</a>
+              <a href="https://linkedin.com/in/jonathancastillo" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a>
+              <a href="mailto:jonathan@example.com" className="hover:text-accent transition-colors">Email</a>
+            </div>
+          </div>
         </footer>
         <Analytics />
       </body>
