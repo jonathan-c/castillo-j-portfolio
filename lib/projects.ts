@@ -55,7 +55,7 @@ export const projects: Project[] = [
     slug: "hostalytics-growth",
     title: "Hostalytics Growth",
     tagline: "Autonomous growth engine that discovers, drafts, publishes, and measures across SEO, Reddit, and BiggerPockets",
-    image: "/images/hostalytics.png",
+    image: "/images/hostalytics-growth.png",
     status: "live",
     featured: true,
     problem:
