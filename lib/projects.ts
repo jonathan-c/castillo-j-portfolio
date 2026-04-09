@@ -81,7 +81,7 @@ export const projects: Project[] = [
     approach:
       "I turned fantasy questions into lightweight polls. Instead of writing a long post and hoping for responses, a user asks a specific question and the community votes. I built an Angular web app with accuracy-based leaderboards, a native SwiftUI iOS app, and a Rails API that scrapes expert projections from fantasy sources using Selenium and processes them asynchronously with Sidekiq. The Angular app and iOS app both hit the same Firebase backend with Cloud Functions handling poll scoring, NFL data sync, and weekly accuracy percentiles.",
     insight:
-      "Sometimes the biggest improvement isn't more intelligence. It's better format. Polling sounds simple, but the format changes behavior: faster participation, easier-to-read results, and discussions that are decision-oriented instead of open-ended.",
+      "Trust is everything when the product touches advice. People aren't looking for more opinions. They're looking for confidence. That means the quality of the insights, the credibility behind each vote, and the logic behind any AI-generated guidance all have to feel reliable. If the product makes bad assumptions, users feel it immediately.",
     techStack: ["Angular", "Swift/SwiftUI", "Rails", "Firebase", "Cloud Functions", "Stripe"],
     liveUrl: "https://pollsports.com/",
     appStoreUrl: "https://apps.apple.com/us/app/poll-sports/id1602304212",
