@@ -69,21 +69,21 @@ export default async function CaseStudyPage({ params }: Props) {
           <p className="font-mono text-[11px] text-accent uppercase tracking-[2.5px] font-semibold mb-3">
             The Problem
           </p>
-          <p className="text-[15px] leading-relaxed">{project.problem}</p>
+          <p className="text-base leading-relaxed">{project.problem}</p>
         </div>
 
         <div>
           <p className="font-mono text-[11px] text-accent uppercase tracking-[2.5px] font-semibold mb-3">
             The Approach
           </p>
-          <p className="text-[15px] leading-relaxed">{project.approach}</p>
+          <p className="text-base leading-relaxed">{project.approach}</p>
         </div>
 
         <div>
           <p className="font-mono text-[11px] text-accent uppercase tracking-[2.5px] font-semibold mb-3">
             Key Insight
           </p>
-          <p className="text-[15px] leading-relaxed italic text-muted">
+          <p className="text-base leading-relaxed italic text-muted">
             &ldquo;{project.insight}&rdquo;
           </p>
         </div>

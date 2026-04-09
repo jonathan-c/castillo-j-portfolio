@@ -18,8 +18,8 @@ export function ProjectCard({ project }: { project: Project }) {
             {statusLabels[project.status]}
           </span>
         </div>
-        <p className="text-[15px] text-muted mb-4">{project.tagline}</p>
-        <p className="text-[15px] leading-relaxed mb-4">
+        <p className="text-base text-muted mb-4">{project.tagline}</p>
+        <p className="text-base leading-relaxed mb-4">
           <strong className="font-semibold">The problem:</strong>{" "}
           {project.problem.split(". ").slice(0, 2).join(". ")}.
         </p>

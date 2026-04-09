@@ -37,7 +37,7 @@ export default function Home() {
         <h2 className="font-display text-[30px] font-extrabold tracking-tight mb-3">
           About
         </h2>
-        <p className="text-[15px] text-muted leading-relaxed max-w-[540px] mb-5">
+        <p className="text-base text-muted leading-relaxed max-w-[540px] mb-5">
           Full-stack engineer based in Tampa Bay. I like building tools that help
           people make better decisions, especially when those decisions normally
           get made on instinct. Always looking for teams that care about craft.
