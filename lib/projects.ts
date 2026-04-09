@@ -61,13 +61,13 @@ export const projects: Project[] = [
     problem:
       "Fantasy football players constantly need quick feedback on lineup decisions, but the places they get it are messy. Reddit threads, Discord, group chats. The feedback is buried in opinions with no structure, no way to compare responses, and no accountability for bad advice.",
     approach:
-      "I turned fantasy questions into lightweight polls. Instead of writing a long post and hoping for responses, a user asks a specific question and the community votes. I built a web app in Astro/Svelte, a native iOS app, and an earlier Angular version, all hitting the same Firebase backend. I layered in AI to complement community votes with context-aware analysis, and built data pipelines to scrape projections from different analysts.",
+      "I turned fantasy questions into lightweight polls. Instead of writing a long post and hoping for responses, a user asks a specific question and the community votes. I built an Angular web app with accuracy-based leaderboards and a native SwiftUI iOS app, both hitting the same Firebase backend with Cloud Functions handling poll scoring, NFL data sync, and weekly accuracy percentiles. I layered in AI to complement community votes with context-aware analysis, and added Stripe for payments.",
     insight:
       "Sometimes the biggest improvement isn't more intelligence. It's better format. Polling sounds simple, but the format changes behavior: faster participation, easier-to-read results, and discussions that are decision-oriented instead of open-ended.",
-    techStack: ["Astro", "Svelte", "Swift/iOS", "Angular", "Firebase", "OpenAI"],
+    techStack: ["Angular", "Swift/SwiftUI", "Firebase", "Cloud Functions", "Stripe"],
     repos: [
-      { name: "poll-sports-web", description: "Web app (Astro + Svelte)", techStack: ["Astro", "Svelte", "Firebase"] },
-      { name: "poll-sports-ios", description: "Native iOS app", techStack: ["Swift", "UIKit", "Firebase"] },
+      { name: "poll-sports-angular", description: "Web app with accuracy leaderboards and NFL data sync", techStack: ["Angular", "Firebase", "RxJS", "PrimeNG", "Stripe"] },
+      { name: "poll-sports-ios", description: "Native iOS app with credibility badges and poll voting", techStack: ["Swift", "SwiftUI", "Firebase", "SPM"] },
     ],
   },
 ];
