@@ -38,9 +38,9 @@ export default function Home() {
           About
         </h2>
         <p className="text-base text-muted leading-relaxed max-w-[540px] mb-5">
-          Full-stack engineer based in Tampa Bay. I like building tools that help
-          people make better decisions, especially when those decisions normally
-          get made on instinct. Always looking for teams that care about craft.
+          Software engineer with 11 years of experience across startups and
+          public companies, including BARK (NYSE: BARK), Raptive, and Ghostery.
+          Outside of work I build and ship my own products. Based in Tampa Bay.
         </p>
         <div className="flex flex-wrap gap-5">
           <OutboundLink
