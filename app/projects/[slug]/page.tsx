@@ -122,18 +122,8 @@ export default async function CaseStudyPage({ params }: Props) {
       )}
 
       {/* Links */}
-      {(project.githubUrl || project.liveUrl) && (
-        <section className="pb-16 flex gap-4">
-          {project.githubUrl && (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-accent font-semibold hover:text-accent-hover"
-            >
-              View on GitHub →
-            </a>
-          )}
+      {(project.githubUrl || project.liveUrl || project.chromeWebStoreUrl) && (
+        <section className="pb-16 flex flex-wrap gap-4">
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -142,6 +132,26 @@ export default async function CaseStudyPage({ params }: Props) {
               className="text-sm text-accent font-semibold hover:text-accent-hover"
             >
               Live Site →
+            </a>
+          )}
+          {project.chromeWebStoreUrl && (
+            <a
+              href={project.chromeWebStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-accent font-semibold hover:text-accent-hover"
+            >
+              Chrome Web Store →
+            </a>
+          )}
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-accent font-semibold hover:text-accent-hover"
+            >
+              View on GitHub →
             </a>
           )}
         </section>

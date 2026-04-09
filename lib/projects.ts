@@ -16,6 +16,7 @@ export interface Project {
   repos: Repo[];
   githubUrl?: string;
   liveUrl?: string;
+  chromeWebStoreUrl?: string;
 }
 
 export const projects: Project[] = [
@@ -31,6 +32,8 @@ export const projects: Project[] = [
     insight:
       "People don't buy analytics because data is interesting. They buy clarity. The value isn't more numbers. It's helping someone feel less uncertain about whether their change worked.",
     techStack: ["Next.js", "Supabase", "Chrome Extension", "PostHog", "Tailwind"],
+    liveUrl: "https://hostalytics.com/",
+    chromeWebStoreUrl: "https://chromewebstore.google.com/detail/hostalytics/dplfgnjhbndklkblgmcbmogapcbhngkp",
     repos: [
       { name: "hostalytics-web", description: "Dashboard and marketing site", techStack: ["Next.js", "Supabase", "Tailwind"] },
       { name: "hostalytics-extension", description: "Chrome extension for listing sync", techStack: ["Chrome V5", "OAuth", "Background sync"] },
@@ -65,6 +68,7 @@ export const projects: Project[] = [
     insight:
       "Sometimes the biggest improvement isn't more intelligence. It's better format. Polling sounds simple, but the format changes behavior: faster participation, easier-to-read results, and discussions that are decision-oriented instead of open-ended.",
     techStack: ["Angular", "Swift/SwiftUI", "Firebase", "Cloud Functions", "Stripe"],
+    liveUrl: "https://pollsports.com/",
     repos: [
       { name: "poll-sports-angular", description: "Web app with accuracy leaderboards and NFL data sync", techStack: ["Angular", "Firebase", "RxJS", "PrimeNG", "Stripe"] },
       { name: "poll-sports-ios", description: "Native iOS app with credibility badges and poll voting", techStack: ["Swift", "SwiftUI", "Firebase", "SPM"] },
@@ -82,6 +86,7 @@ export const projects: Project[] = [
     insight:
       "Start with the constraints, not the features. Virginia's two-dog limit is the single most important thing about her business. Every technical decision flows from that. If I'd started with a feature list instead of understanding the constraint, I would have over-engineered some parts and under-engineered the one that matters.",
     techStack: ["Next.js", "Supabase", "Tailwind", "Google Calendar API"],
+    liveUrl: "https://www.walksbyvirginia.com/",
     repos: [
       { name: "walks-by-virginia-web", description: "Booking platform, admin dashboard, and marketing site", techStack: ["Next.js", "Supabase", "Tailwind", "RLS", "ISR"] },
     ],
