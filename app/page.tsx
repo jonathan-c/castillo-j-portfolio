@@ -38,7 +38,7 @@ export default function Home() {
           About
         </h2>
         <p className="text-base text-muted leading-relaxed max-w-[540px] mb-5">
-          Software engineer with 11 years of experience across startups and
+          Software engineer with 13 years of experience across startups and
           public companies, including BARK (NYSE: BARK), Raptive, and Ghostery.
           Outside of work I build and ship my own products. Based in Tampa Bay.
         </p>
