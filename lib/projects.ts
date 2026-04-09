@@ -122,7 +122,7 @@ export const projects: Project[] = [
     approach:
       "I built her a full booking platform in five days. Next.js, Supabase, Tailwind. A multi-step booking form handles service selection, date picking, dog profiles, and vet authorization. A Supabase stored procedure checks real-time capacity against her two-dog limit. Confirmed bookings sync to Google Calendar. The admin dashboard handles date blocking, capacity overrides, and per-dog care plans. Row-level security on every table, immutable vet authorization records, and 149 tests across 21 files.",
     insight:
-      "Multi-tenant architecture for a single user felt like overkill. But scoping everything by org_id meant Row-Level Security was trivial to implement, and the whole platform is ready if she ever brings on another caregiver or if I offer this to other solo pet-care operators. The marginal cost of doing it right was almost nothing.",
+      "I built it so every piece of data is scoped to the business that owns it, even though there's only one business right now. That made the security model simple and means the whole platform works out of the box if Virginia brings on another caregiver or if I offer this to other solo pet-care operators. The extra effort was almost zero, and now it's ready to grow without a rewrite.",
     techStack: ["Next.js", "Supabase", "Tailwind", "Google Calendar API"],
     liveUrl: "https://www.walksbyvirginia.com/",
     repos: [
