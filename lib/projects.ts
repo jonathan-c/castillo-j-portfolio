@@ -8,6 +8,7 @@ export interface Project {
   slug: string;
   title: string;
   tagline: string;
+  image: string;
   status: "live" | "chrome-web-store" | "testflight" | "in-development";
   featured: boolean;
   problem: string;
@@ -32,6 +33,7 @@ export const projects: Project[] = [
     slug: "hostalytics",
     title: "Hostalytics",
     tagline: "Helps Airbnb hosts track listing changes and see what actually worked",
+    image: "/images/hostalytics.png",
     status: "live",
     featured: true,
     problem:
@@ -53,6 +55,7 @@ export const projects: Project[] = [
     slug: "good-boy-guide",
     title: "Good Boy Guide",
     tagline: "Scrapes 13+ venues, writes a weekly dog-friendly events newsletter for Tampa Bay",
+    image: "/images/good-boy-guide.png",
     status: "live",
     featured: true,
     problem:
@@ -70,6 +73,7 @@ export const projects: Project[] = [
     slug: "poll-sports",
     title: "Poll Sports",
     tagline: "Community-driven fantasy football polls with accuracy leaderboards, web + iOS",
+    image: "/images/pollsports.png",
     status: "live",
     featured: true,
     problem:
@@ -89,6 +93,7 @@ export const projects: Project[] = [
     slug: "walks-by-virginia",
     title: "Walks by Virginia",
     tagline: "Full booking platform for a boutique dog boarding business, built in 5 days",
+    image: "/images/walksbyvirginia.png",
     status: "live",
     featured: true,
     problem:

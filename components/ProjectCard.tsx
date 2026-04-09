@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { TechTag } from "./TechTag";
 import type { Project } from "@/lib/projects";
@@ -6,8 +7,15 @@ import { statusLabels } from "@/lib/projects";
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="bg-surface border border-border rounded-[14px] overflow-hidden mb-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-      <div className="bg-[#EDE9E5] h-[230px] flex items-center justify-center text-muted font-mono text-xs">
-        [ Screenshot: {project.title} ]
+      <div className="relative h-[230px] sm:h-[280px] bg-[#EDE9E5]">
+        <Image
+          src={project.image}
+          alt={`${project.title} product screenshot`}
+          fill
+          className="object-cover object-top"
+          sizes="(max-width: 740px) 100vw, 740px"
+          priority={project.slug === "hostalytics"}
+        />
       </div>
       <div className="p-7">
         <div className="flex items-center gap-3 mb-1.5">

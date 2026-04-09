@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getProjectBySlug, getAllSlugs } from "@/lib/projects";
@@ -58,9 +59,16 @@ export default async function CaseStudyPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Screenshot placeholder */}
-      <div className="bg-[#EDE9E5] rounded-[14px] h-[280px] sm:h-[360px] flex items-center justify-center text-muted font-mono text-xs mb-12">
-        [ Screenshot: {project.title} ]
+      {/* Product screenshot */}
+      <div className="relative rounded-[14px] overflow-hidden h-[280px] sm:h-[400px] bg-[#EDE9E5] mb-12">
+        <Image
+          src={project.image}
+          alt={`${project.title} product screenshot`}
+          fill
+          className="object-cover object-top"
+          sizes="(max-width: 740px) 100vw, 740px"
+          priority
+        />
       </div>
 
       {/* Content */}
