@@ -70,25 +70,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "good-boy-guide",
-    title: "Good Boy Guide",
-    tagline: "Scrapes 13+ venues, writes a weekly dog-friendly events newsletter for Tampa Bay",
-    image: "/images/good-boy-guide.png",
-    status: "live",
-    featured: true,
-    problem:
-      "Dog-friendly event info in Tampa Bay is scattered across 13+ venue websites, none of which talk to each other and all of which render event data differently. My fiancée publishes a newsletter curating these events, and the manual process of visiting every site, deduplicating, and rewriting descriptions was taking hours every week.",
-    approach:
-      "I built a CLI pipeline that does the whole job end to end. Playwright visits 13 configured sources, each with its own adapter for selectors and date formats. Luxon normalizes dates, a hashing function deduplicates across sources, and history tracking tags events as new, recurring, or returning. OpenAI enriches each event with a one-to-two sentence description, then the pipeline renders HTML and pushes a draft to Beehiiv via their API. Two minutes, scrape to draft.",
-    insight:
-      "The tool creates a draft, not a published newsletter. That boundary is what makes it useful. She handles editorial judgment, the automation handles drudgery. If I'd automated everything end to end, the output would be generic and she'd stop using it.",
-    techStack: ["Node.js", "Playwright", "OpenAI", "Beehiiv", "Luxon"],
-    liveUrl: "https://goodboyguide.com/",
-    repos: [
-      { name: "good-boy-guide-agent", description: "Scraper, enrichment, and newsletter pipeline", techStack: ["Node.js", "Playwright", "OpenAI", "Luxon"] },
-    ],
-  },
-  {
     slug: "poll-sports",
     title: "Poll Sports",
     tagline: "Community-driven fantasy football polls with accuracy leaderboards, web + iOS",
@@ -108,6 +89,25 @@ export const projects: Project[] = [
       { name: "poll-sports-angular", description: "Web app with accuracy leaderboards and NFL data sync", techStack: ["Angular", "Firebase", "RxJS", "PrimeNG", "Stripe"] },
       { name: "poll-sports-ios", description: "Native iOS app with credibility badges and poll voting", techStack: ["Swift", "SwiftUI", "Firebase", "SPM"] },
       { name: "poll_sports_rails_api", description: "Projections scraper and analyst data pipeline", techStack: ["Rails 7", "PostgreSQL", "Sidekiq", "Selenium"] },
+    ],
+  },
+  {
+    slug: "good-boy-guide",
+    title: "Good Boy Guide",
+    tagline: "Scrapes 13+ venues, writes a weekly dog-friendly events newsletter for Tampa Bay",
+    image: "/images/good-boy-guide.png",
+    status: "live",
+    featured: true,
+    problem:
+      "Dog-friendly event info in Tampa Bay is scattered across 13+ venue websites, none of which talk to each other and all of which render event data differently. My fiancée publishes a newsletter curating these events, and the manual process of visiting every site, deduplicating, and rewriting descriptions was taking hours every week.",
+    approach:
+      "I built a CLI pipeline that does the whole job end to end. Playwright visits 13 configured sources, each with its own adapter for selectors and date formats. Luxon normalizes dates, a hashing function deduplicates across sources, and history tracking tags events as new, recurring, or returning. OpenAI enriches each event with a one-to-two sentence description, then the pipeline renders HTML and pushes a draft to Beehiiv via their API. Two minutes, scrape to draft.",
+    insight:
+      "The tool creates a draft, not a published newsletter. That boundary is what makes it useful. She handles editorial judgment, the automation handles drudgery. If I'd automated everything end to end, the output would be generic and she'd stop using it.",
+    techStack: ["Node.js", "Playwright", "OpenAI", "Beehiiv", "Luxon"],
+    liveUrl: "https://goodboyguide.com/",
+    repos: [
+      { name: "good-boy-guide-agent", description: "Scraper, enrichment, and newsletter pipeline", techStack: ["Node.js", "Playwright", "OpenAI", "Luxon"] },
     ],
   },
   {
