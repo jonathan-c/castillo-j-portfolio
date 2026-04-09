@@ -24,7 +24,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
         <Link
           href={`/projects/${project.slug}`}
-          className="text-sm text-accent font-semibold hover:text-accent-hover"
+          className="inline-block text-sm text-accent font-semibold hover:text-accent-hover py-2"
         >
           Read case study →
         </Link>
