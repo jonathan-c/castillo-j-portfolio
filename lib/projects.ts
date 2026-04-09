@@ -43,7 +43,7 @@ export const projects: Project[] = [
       "I built a product suite: a Next.js dashboard for tracking experiments, a Chrome extension that auto-syncs listing data every 6 hours, and a growth tool that finds relevant host conversations on Reddit and BiggerPockets. The extension captures listing changes automatically, and the dashboard frames them as before-and-after experiments tied to real performance data.",
     insight:
       "People don't buy analytics because data is interesting. They buy clarity. The value isn't more numbers. It's helping someone feel less uncertain about whether their change worked.",
-    techStack: ["Next.js", "Supabase", "Chrome Extension", "PostHog", "Tailwind"],
+    techStack: ["Next.js", "Supabase", "Chrome Extension", "PostHog", "Stripe", "Tailwind"],
     liveUrl: "https://hostalytics.com/",
     chromeWebStoreUrl: "https://chromewebstore.google.com/detail/hostalytics/dplfgnjhbndklkblgmcbmogapcbhngkp",
     repos: [
