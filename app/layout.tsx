@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Instrument_Sans, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
+import { OutboundLink } from "@/components/OutboundLink";
 import "./globals.css";
 
 const instrumentSans = Instrument_Sans({
@@ -59,8 +60,8 @@ export default function RootLayout({
           <div className="flex flex-wrap items-center justify-between gap-4">
             <p>Jonathan Castillo</p>
             <div className="flex gap-5">
-              <a href="https://github.com/jonathan-c/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">GitHub</a>
-              <a href="https://www.linkedin.com/in/castillojonathan/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a>
+              <OutboundLink href="https://github.com/jonathan-c/" label="GitHub (footer)" className="hover:text-accent transition-colors">GitHub</OutboundLink>
+              <OutboundLink href="https://www.linkedin.com/in/castillojonathan/" label="LinkedIn (footer)" className="hover:text-accent transition-colors">LinkedIn</OutboundLink>
             </div>
           </div>
         </footer>
