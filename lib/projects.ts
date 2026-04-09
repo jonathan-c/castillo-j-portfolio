@@ -40,7 +40,7 @@ export const projects: Project[] = [
     problem:
       "Airbnb gives hosts performance metrics but never connects them to specific listing changes. A host updates their title, sees bookings go up a week later, and has no idea if it was the title, a demand spike, or a pricing change. Every optimization is a guess.",
     approach:
-      "I built a product suite: a Next.js dashboard for tracking experiments, a Chrome extension that auto-syncs listing data every 6 hours, and a growth tool that finds relevant host conversations on Reddit and BiggerPockets. The extension captures listing changes automatically, and the dashboard frames them as before-and-after experiments tied to real performance data.",
+      "I built a Next.js dashboard for tracking experiments and a Chrome extension that auto-syncs listing data every 6 hours. The extension captures listing changes automatically, and the dashboard frames them as before-and-after experiments tied to real performance data. Stripe handles payments, Supabase handles auth and storage, PostHog tracks funnel metrics.",
     insight:
       "People don't buy analytics because data is interesting. They buy clarity. The value isn't more numbers. It's helping someone feel less uncertain about whether their change worked.",
     techStack: ["Next.js", "Supabase", "Chrome Extension", "PostHog", "Stripe", "Tailwind"],
@@ -49,7 +49,24 @@ export const projects: Project[] = [
     repos: [
       { name: "hostalytics-web", description: "Dashboard and marketing site", techStack: ["Next.js", "Supabase", "Tailwind"] },
       { name: "hostalytics-extension", description: "Chrome extension for listing sync", techStack: ["Chrome V5", "OAuth", "Background sync"] },
-      { name: "hostalytics-growth", description: "Community outreach automation", techStack: ["Node.js", "Reddit API", "PostHog"] },
+    ],
+  },
+  {
+    slug: "hostalytics-growth",
+    title: "Hostalytics Growth",
+    tagline: "Autonomous growth engine that discovers, drafts, publishes, and measures across SEO, Reddit, and BiggerPockets",
+    image: "/images/hostalytics.png",
+    status: "live",
+    featured: true,
+    problem:
+      "Building a product is one thing. Getting it in front of the right people is another. Airbnb hosts searching for optimization tips don't know Hostalytics exists, and the communities where they ask for help are fragmented across Reddit, BiggerPockets, and Facebook Groups. Manual outreach doesn't scale, and generic content marketing doesn't convert.",
+    approach:
+      "I built a three-channel growth engine in TypeScript. The outreach channel discovers relevant threads across Reddit, BiggerPockets, and Facebook Groups, scores them for relevance with the OpenAI API, and generates community-appropriate draft responses with UTM-tagged links. The SEO channel generates and publishes resource pages targeting high-intent keywords as PRs to the main Hostalytics repo. Every experiment is tracked in PostHog and automatically evaluated after 7-30 days. Hierarchical prompt engineering (master, channel, community) keeps the voice consistent. All outputs require human review before publishing.",
+    insight:
+      "The human-in-the-loop design is what makes this work. Outreach drafts are never auto-posted, SEO pages require PR review. Full automation would produce spam. The system handles discovery, scoring, and drafting at scale, and humans handle judgment and approval.",
+    techStack: ["TypeScript", "OpenAI API", "PostHog", "Playwright", "Cheerio", "simple-git"],
+    repos: [
+      { name: "hostalytics-growth", description: "Multi-channel growth engine with experiment tracking", techStack: ["TypeScript", "OpenAI", "PostHog", "Playwright", "Cheerio"] },
     ],
   },
   {
