@@ -103,7 +103,7 @@ export const projects: Project[] = [
     approach:
       "I built a CLI pipeline that does the whole job end to end. Playwright visits 13 configured sources, each with its own adapter for selectors and date formats. Luxon normalizes dates, a hashing function deduplicates across sources, and history tracking tags events as new, recurring, or returning. OpenAI enriches each event with a one-to-two sentence description, then the pipeline renders HTML and pushes a draft to Beehiiv via their API. Two minutes, scrape to draft.",
     insight:
-      "The tool creates a draft, not a published newsletter. That boundary is what makes it useful. She handles editorial judgment, the automation handles drudgery. If I'd automated everything end to end, the output would be generic and she'd stop using it.",
+      "Each website is its own little kingdom with its own quirks. A generic scraper that tries to guess where event data lives works maybe 60% of the time. The real unlock was accepting that each source needs its own configuration. It's not elegant, but it's reliable, and reliable matters more when you're generating a newsletter someone actually sends to subscribers.",
     techStack: ["Node.js", "Playwright", "OpenAI", "Beehiiv", "Luxon"],
     liveUrl: "https://goodboyguide.com/",
     repos: [
