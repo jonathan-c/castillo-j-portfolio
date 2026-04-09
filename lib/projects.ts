@@ -98,7 +98,7 @@ export const projects: Project[] = [
     status: "live",
     featured: true,
     problem:
-      "My fiancée Virginia runs a boutique dog boarding business out of our home, two dogs at a time. That intentional limit is the whole value proposition. But the tools available to solo pet-care operators are either giant marketplaces like Rover or nothing at all. There was no simple way to handle bookings, track each dog's care needs, manage capacity, or present a professional brand that matched the quality of her service.",
+      "The tools available to solo pet-care operators are either giant marketplaces like Rover or nothing at all. My fiancée Virginia runs a boutique dog boarding business, two dogs at a time, and there was no simple way to handle bookings, track each dog's care needs, manage capacity, or present a professional brand that matched the quality of her service.",
     approach:
       "I built her a full booking platform in five days. Next.js, Supabase, Tailwind. A multi-step booking form handles service selection, date picking, dog profiles, and vet authorization. A Supabase stored procedure checks real-time capacity against her two-dog limit. Confirmed bookings sync to Google Calendar. The admin dashboard handles date blocking, capacity overrides, and per-dog care plans. Row-level security on every table, immutable vet authorization records, and 149 tests across 21 files.",
     insight:
