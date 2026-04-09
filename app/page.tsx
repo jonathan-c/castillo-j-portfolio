@@ -18,7 +18,7 @@ export default function Home() {
           Full-Stack Engineer
         </p>
         <p className="text-[17px] text-muted leading-relaxed max-w-[540px]">
-          I build things people actually use. Outside of work, I&apos;ve shipped
+          I like building products end to end. Outside of work, I&apos;ve shipped
           a product suite for Airbnb hosts, a cross-platform sports app, and an
           AI agent that writes newsletters.
         </p>
