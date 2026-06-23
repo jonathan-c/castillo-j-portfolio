@@ -31,6 +31,30 @@ export const statusLabels: Record<Project["status"], string> = {
 
 export const projects: Project[] = [
   {
+    slug: "mentorium",
+    title: "Mentorium",
+    tagline:
+      "Turns 600+ episodes of The Tim Ferriss Show into something you can ask — every answer cited to the exact moment",
+    image: "/images/mentorium.png",
+    status: "live",
+    featured: true,
+    problem:
+      "The Tim Ferriss Show has 600+ episodes of world-class guests, but all of that advice is locked in linear audio. If you want to know how guests build habits or bounce back from failure, your only options are listening for hundreds of hours or keyword-searching transcripts and reading around the hit. There's no way to just ask a question and get an answer grounded in what people actually said.",
+    approach:
+      "I built a retrieval-augmented search engine over the full transcript corpus. 142,000+ transcript segments are embedded and stored in Postgres with pgvector, and a hybrid retriever blends full-text search with vector similarity (HNSW index) to pull the most relevant passages for any question. A grounded synthesis step answers using only those passages and emits citations as segment IDs, which I validate server-side against the retrieved set so a hallucinated source can never reach the UI. The app has three ways in — ask anything across the catalog, ask a single guest across all their appearances, or browse ranked lists the show keeps returning to, like most-gifted books and best sub-$100 purchases. Next.js front to back, deployed on Railway with a self-hosted pgvector database.",
+    insight:
+      "Citations are the entire product, and they can't be trusted to the model. They have to be engineered. The model proposes which segments support a claim, but the server decides whether those segments were actually retrieved before anything renders. That one constraint is the difference between an AI that talks about a podcast and a tool you can trust, because every claim links back to the exact moment a guest said it.",
+    techStack: ["Next.js", "PostgreSQL", "pgvector", "OpenAI", "Drizzle ORM", "Railway", "Tailwind"],
+    liveUrl: "https://mentorium.fyi",
+    repos: [
+      {
+        name: "mentorium",
+        description: "RAG search over The Tim Ferriss Show — hybrid retrieval, grounded synthesis, cited answers",
+        techStack: ["Next.js", "pgvector", "OpenAI", "Drizzle", "Railway"],
+      },
+    ],
+  },
+  {
     slug: "hostalytics",
     title: "Hostalytics",
     tagline: "Helps Airbnb hosts track listing changes and see what actually worked",
